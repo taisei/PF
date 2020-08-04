@@ -43,4 +43,4 @@ Things you may want to cover:
 
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/d/19KJKduLrgZvVGZ5M7He7caythtQtV4BW1Um5-E08PGE/edit#gid=0
+https://docs.google.com/spreadsheets/d/19KJKduLrgZvVGZ5M7He7caythtQtV4BW1Um5-E08PGE/edit?usp=sharing
