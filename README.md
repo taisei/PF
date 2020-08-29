@@ -43,3 +43,12 @@ Things you may want to cover:
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/19KJKduLrgZvVGZ5M7He7caythtQtV4BW1Um5-E08PGE/edit?usp=sharing
+%= f.attachment_field :image,size: "190x150" %>
+<%= image_tag('sample-author1.jpg', style: "width: 60px; height: 60px;") %>
+def create
+    post_image = PostImage.find(params[:post_image_id])
+    favorite = current_user.favorites.new(post_image_id: post_image.id)
+    favorite.save
+    redirect_to post_image_path(post_image)
+  end
+  <li><%= link_to "mypage", edit_user_path(@user), class: "glyphicon glyphicon-user" %></li>

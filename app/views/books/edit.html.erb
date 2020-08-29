@@ -1,0 +1,22 @@
+1  <thead>
+    <tr>
+      <th>
+      </th>
+      <th>
+        参考書名
+      </th>
+      <th>
+        説明
+      </th>
+    </tr>
+  </thead>
+  <%= form_for(@book) do |f| %>
+  <tr>
+  <td><%= f.attachment_field :book_image,size: "190x150" %></td>
+    <td><%= f.text_field :name %></td>
+    <td><%= f.text_field :explanation %></td>
+    <%= f.submit %>
+  </tr>
+  <% end %>
+</table>
+</div>

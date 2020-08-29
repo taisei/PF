@@ -1,0 +1,38 @@
+<%= form_for(@user) do |f| %>
+
+<form>
+    <div class="row">
+      <p>
+          <%= attachment_image_tag @user , :profile_image, size: "300x200"  %>
+        </p>
+        <%= f.attachment_field :profile_image,size: "190x150" %>
+      <div class="col-xs-2">
+        <%= f.label :"名前" %>
+      </div>
+      <div class="col-xs-3 field">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+ <div class="row">
+      <div class="col-xs-2">
+        <%= f.label :"志望校" %>
+      </div>
+      <div class="col-xs-3 field">
+        <%= f.text_field :school %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-xs-2">
+        <%= f.label :"一言" %>
+      </div>
+      <div class="col-xs-3 field">
+        <%= f.text_field :introduction %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="actions">
+        <%= f.submit "編集内容を保存する" ,class: 'btn btn-success' %>
+      </div>
+    </div>
+  </form>
+<% end %>

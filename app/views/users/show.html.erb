@@ -1,0 +1,49 @@
+<div class="row">
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+      </th>
+      <th>
+        参考書名
+      </th>
+      <th>
+        説明
+      </th>
+    </tr>
+  </thead>
+  <% @books.each do |book| %>
+  <tr>
+  <td><%= attachment_image_tag book, :book_image, size: '60x60', fallback: "no_image.jpg" %></td>
+    <td><%= book.name %></td>
+    <td><%= book.explanation %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+<%= form_for [@user, @post_comment] do |f| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+    </div>
+  </div>
+  <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+<% end %>
+<ol>
+  <% @user.post_comments.each do |post_comment| %>
+    <li class="comment">
+      <div class="comment-body bb">
+        <div class="comment-avatar">
+          <div class="avatar">
+          </div>
+        </div>
+        <div class="comment-text">
+          <div class="comment-author clearfix">
+            </span>
+          </div>
+          <div class="comment-entry"><%= post_comment.comment %></div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ol>
